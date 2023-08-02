@@ -22,6 +22,10 @@ span {
   animation: letter 3s ease-in-out infinite alternate;
 }
 
+.mobile-letter {
+  display: none;
+}
+
 .inside-letter {
   font-size: 1rem;
   padding: 0 10px;
@@ -30,9 +34,23 @@ span {
   animation: inside-letter 3s ease-in-out infinite alternate;
 }
 
-@media (max-width: 600px) {
-  .main {
-    transform: scale(0.65);
+@media (max-width: 770px) {
+  .letter {
+    animation: none;
+  }
+
+  .inside-letter {
+    animation: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .letter {
+    display: none;
+  }
+
+  .mobile-letter {
+    display: block;
   }
 }
 

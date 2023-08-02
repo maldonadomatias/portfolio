@@ -30,10 +30,12 @@ const Welcome = () => {
           <span className="letter">
             <span className="inside-letter">front-end.web(developer)</span>
           </span>
+          <span className="mobile-letter">o</span>
           <span>n</span>
           <span>a</span>
           <span>d</span>
           <span>o</span>
+          <span>.</span>
         </div>
       </Title>
     </Container>
