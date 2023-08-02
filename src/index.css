@@ -1,0 +1,120 @@
+:root {
+  --beige: #f5ebe0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  border: 10px solid #000000;
+  background-color: var(--beige);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.p1 {
+  font-size: 1.5rem;
+}
+
+.p2 {
+  font-size: 1.25rem;
+}
+
+.p3 {
+  font-size: 1rem;
+}
+
+.p4 {
+  font-size: 0.875rem;
+}
+
+.p5 {
+  font-size: 0.75rem;
+}
+
+.p6 {
+  font-size: 0.625rem;
+}
+
+.p7 {
+  font-size: 0.5rem;
+}
+
+input {
+  /* Disable default styling */
+  appearance: none;
+  /* Remove the default focus outline */
+  outline: none;
+  /* Add custom styling */
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: inherit !important;
+}
+
+@media (max-width: 770px) {
+  html,
+  body,
+  #root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 470px) {
+  html,
+  body,
+  #root {
+    font-size: 12px;
+  }
+}

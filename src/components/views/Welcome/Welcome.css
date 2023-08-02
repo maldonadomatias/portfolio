@@ -1,0 +1,62 @@
+span {
+  line-height: 0.7;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.letter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  top: 2px;
+  border: 7px solid black;
+  border-radius: 20px;
+  animation: letter 3s ease-in-out infinite alternate;
+}
+
+.inside-letter {
+  font-size: 1rem;
+  padding: 0 10px;
+  overflow: hidden;
+  opacity: 1;
+  animation: inside-letter 3s ease-in-out infinite alternate;
+}
+
+@media (max-width: 600px) {
+  .main {
+    transform: scale(0.65);
+  }
+}
+
+@keyframes letter {
+  0%,
+  30% {
+    width: 30px;
+  }
+  70%,
+  100% {
+    width: 30vw;
+  }
+}
+
+@keyframes inside-letter {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  70%,
+  100% {
+    opacity: 1;
+  }
+}
