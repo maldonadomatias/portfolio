@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "./Welcome.css";
+import Navbar from "../Navbar/Navbar";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ const Title = styled.h1`
 const Welcome = () => {
   return (
     <Container>
+      <Navbar />
       <Title>
         matias{" "}
         <div className="main">
