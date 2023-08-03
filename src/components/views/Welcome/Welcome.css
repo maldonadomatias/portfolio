@@ -31,6 +31,7 @@ span {
   padding: 0 10px;
   opacity: 1;
   animation: inside-letter 3s ease-in-out infinite alternate;
+  white-space: nowrap;
 }
 
 @media (max-width: 770px) {
