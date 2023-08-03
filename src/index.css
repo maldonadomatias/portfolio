@@ -1,5 +1,11 @@
 :root {
-  --beige: #f5ebe0;
+  --background-color: #f5ebe0;
+  --foreground-color: #000000;
+}
+
+.dark-mode {
+  --background-color: #000000 !important;
+  --foreground-color: #f5ebe0 !important;
 }
 
 #root {
@@ -29,8 +35,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  border: 10px solid #000000;
-  background-color: var(--beige);
+  border: 10px solid var(--foreground-color);
+  background-color: var(--background-color);
+  transition: all 0.25s ease-in-out;
 }
 
 h1 {

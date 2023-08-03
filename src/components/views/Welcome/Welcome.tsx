@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
+  color: var(--foreground-color);
 `;
 
 const Title = styled.h1`

@@ -17,7 +17,7 @@ span {
   align-items: center;
   height: 33px;
   top: 2px;
-  border: 7px solid black;
+  border: 7px solid var(--foreground-color);
   border-radius: 20px;
   animation: letter 3s ease-in-out infinite alternate;
 }

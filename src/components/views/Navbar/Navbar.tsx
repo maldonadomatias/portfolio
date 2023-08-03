@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTheme } from "../../../context/theme-context";
 
 const Container = styled.div`
   display: flex;
@@ -15,17 +16,25 @@ const Logo = styled.div`
   font-weight: 700;
 `;
 
-const DarkMode = styled.div`
+const ThemeMode = styled.div`
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
 `;
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  const handleClick = () => {
+    toggleTheme();
+  };
+
   return (
     <Container>
       <Logo>mm.</Logo>
-      <DarkMode>dark mode.</DarkMode>
+      <ThemeMode onClick={handleClick}>
+        {theme === "light" ? "dark" : "light"} mode.
+      </ThemeMode>
     </Container>
   );
 };
