@@ -8,8 +8,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
   color: var(--foreground-color);
+  padding: 0 2%;
 `;
 
 const Title = styled.h1`
