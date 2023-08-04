@@ -3,7 +3,7 @@ import TitleUI from "../../ui/TitleUI";
 
 const AboutMe = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="about-me">
       <TitleUI title="about me" />
     </SectionContainer>
   );

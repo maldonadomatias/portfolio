@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTheme } from "./context/theme-context";
 import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const { theme } = useTheme();
@@ -15,7 +16,9 @@ function App() {
   }, [theme]);
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }

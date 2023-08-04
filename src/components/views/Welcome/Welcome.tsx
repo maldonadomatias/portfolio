@@ -21,7 +21,7 @@ const Title = styled.h1`
 
 const Welcome = () => {
   return (
-    <Container>
+    <Container id="home">
       <Navbar />
       <Title>
         matias{" "}

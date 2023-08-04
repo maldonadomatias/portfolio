@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 interface Props {
   children: React.ReactNode;
+  id: string;
 }
 
 const Container = styled.div`
@@ -13,8 +14,8 @@ const Container = styled.div`
   padding: 0 2%;
 `;
 
-const SectionContainer = ({ children }: Props) => {
-  return <Container>{children}</Container>;
+const SectionContainer = ({ children, id }: Props) => {
+  return <Container id={id}>{children}</Container>;
 };
 
 export default SectionContainer;
