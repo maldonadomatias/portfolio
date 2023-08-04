@@ -65,7 +65,6 @@ const NavList = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 `;
 
@@ -118,7 +117,7 @@ const Line = styled.div<{ position: number }>`
   order: -1;
   position: absolute;
   right: 12px;
-  top: ${({ position }) => `${position * 31}%`};
+  top: ${({ position }) => (position === -1 ? `0%` : `${position * 31}%`)};
   transition: top 0.3s ease-in-out;
 
   @media (max-width: 690px) {
