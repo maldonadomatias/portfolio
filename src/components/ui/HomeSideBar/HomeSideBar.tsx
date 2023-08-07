@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { BiHomeAlt2 } from "react-icons/bi";
-import { SiAboutdotme } from "react-icons/si";
-import { MdWorkOutline } from "react-icons/md";
-import { RiContactsBookLine } from "react-icons/ri";
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+import { Link } from "react-scroll";
+import { navbarData } from "../../../constants/navbar";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -127,53 +125,28 @@ const Line = styled.div<{ position: number }>`
 `;
 
 const HomeSideBar = () => {
-  const location = useLocation();
-
-  // Define the sections for the navigation
-  const sections = ["#home", "#about-me", "#projects", "#contact"];
-
   // State variable to track the active section index
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
-
-  // Function to find the index of the active section
-  const findActiveSectionIndex = () => {
-    const index = sections.findIndex((section) => section === location.hash);
-    setActiveSectionIndex(index);
-  };
-
-  // Call the findActiveSectionIndex function on component mount and whenever the location changes
-  useEffect(() => {
-    findActiveSectionIndex();
-  }, [location]);
 
   return (
     <SidebarContainer>
       <NavListContainer>
         <NavList>
-          <a href="#home">
-            <NavItem>
-              <p>home</p>
-              <BiHomeAlt2 />
-            </NavItem>
-          </a>
-          <a href="#about-me">
-            <NavItem>
-              <p>about</p>
-              <SiAboutdotme />
-            </NavItem>
-          </a>
-          <a href="#projects">
-            <NavItem>
-              <p>projects</p>
-              <MdWorkOutline />
-            </NavItem>
-          </a>
-          <a href="#contact">
-            <NavItem>
-              <p>contact</p>
-              <RiContactsBookLine />
-            </NavItem>
-          </a>
+          {navbarData.map((item, index) => (
+            <Link
+              key={index}
+              onSetActive={() => setActiveSectionIndex(index)}
+              to={item.link}
+              smooth
+              spy
+              duration={500}
+            >
+              <NavItem>
+                <p>{item.name}</p>
+                {item.icon}
+              </NavItem>
+            </Link>
+          ))}
         </NavList>
         <Line position={activeSectionIndex} />
       </NavListContainer>

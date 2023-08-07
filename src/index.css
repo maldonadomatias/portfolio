@@ -107,6 +107,10 @@ input:-internal-autofill-selected {
   color: inherit !important;
 }
 
+.active {
+  top: 130px;
+}
+
 @media (max-width: 770px) {
   html,
   body,
