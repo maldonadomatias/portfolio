@@ -2,12 +2,16 @@
   --background-color: #f5ebe0;
   --foreground-color: #000000;
   --shadow-color: #0000001a;
+  --hover-color: #6c6c6c;
+  --white-color: #fdfdfd;
 }
 
 .dark-mode {
   --background-color: #000000 !important;
   --foreground-color: #f5ebe0 !important;
   --shadow-color: #f5ebe057 !important;
+  --hover-color: #bdbdbd !important;
+  --white-color: #222222 !important;
 }
 
 #root {

@@ -8,10 +8,11 @@ interface Props {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1600px;
   min-height: 100vh;
   gap: 4rem;
   padding: 0 2%;
+  margin: 0 auto;
 `;
 
 const SectionContainer = ({ children, id }: Props) => {

@@ -11,7 +11,7 @@ const SidebarContainer = styled.div`
   right: 2%;
   width: fit-content;
   height: fit-content;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
   color: var(--foreground-color);
 
