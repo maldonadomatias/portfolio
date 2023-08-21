@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 import SectionContainer from "../../ui/SectionContainer";
 import TitleUI from "../../ui/TitleUI";
 import { aboutSmallData } from "../../../constants/aboutMe";
+import { IMAGE_PATHS } from "../../../constants/imagePaths";
+import CardsHover from "./CardsHover";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -15,8 +17,10 @@ const InfoContainer = styled.div`
   img {
     width: 300px;
     height: 300px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid var(--shadow-color);
   }
 
   div {
@@ -69,41 +73,12 @@ const InfoList = styled.ul`
   }
 `;
 
-const AboutCardContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-
-  @media (max-width: 690px) {
-    /* Mobile styles */
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
-
-const AboutSmallCard = styled.div`
-  width: 100%;
-  border-radius: 10px;
-  padding: 1rem;
-  gap: 1rem;
-  display: flex;
-  height: 100%;
-  background-color: var(--white-color);
-  color: var(--foreground-color);
-  border: 2px solid var(--foreground-color);
-
-  svg {
-    font-size: 2.5rem;
-  }
-`;
-
 const AboutMe = () => {
   return (
     <SectionContainer id="about-me">
       <TitleUI title="about me" />
       <InfoContainer>
-        <img src="https://via.placeholder.com/300" alt="profile" />
+        <img src={IMAGE_PATHS.matias} alt="profile" />
         <div>
           <h3>Matias Maldonado</h3>
           <p>
@@ -120,17 +95,7 @@ const AboutMe = () => {
           </InfoList>
         </div>
       </InfoContainer>
-      <AboutCardContainer>
-        {aboutSmallData.map((item, index) => (
-          <AboutSmallCard key={index}>
-            <div>{item.icon}</div>
-            <div>
-              <h6>{item.title}</h6>
-              <p className="p4">{item.description}</p>
-            </div>
-          </AboutSmallCard>
-        ))}
-      </AboutCardContainer>
+      <CardsHover data={aboutSmallData} />
     </SectionContainer>
   );
 };

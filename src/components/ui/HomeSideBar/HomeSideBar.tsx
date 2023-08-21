@@ -6,6 +6,7 @@ import { navbarData } from "../../../constants/navbar";
 
 const SidebarContainer = styled.div`
   position: fixed;
+  z-index: 100;
   transform: translate(0, -50%);
   top: 50%;
   right: 2%;

@@ -1,9 +1,11 @@
 :root {
-  --background-color: #f5ebe0;
+  --background-color: rgb(245, 235, 224);
   --foreground-color: #000000;
   --shadow-color: #0000001a;
   --hover-color: #6c6c6c;
   --white-color: #fdfdfd;
+  --shine-effect-before: rgba(134, 134, 134, 0.2);
+  --shine-effect-after: rgba(130, 130, 130, 0.4);
 }
 
 .dark-mode {
@@ -12,6 +14,8 @@
   --shadow-color: #f5ebe057 !important;
   --hover-color: #bdbdbd !important;
   --white-color: #222222 !important;
+  --shine-effect-before: rgba(255, 255, 255, 0.2) !important;
+  --shine-effect-after: rgba(255, 255, 255, 0.4) !important;
 }
 
 #root {
