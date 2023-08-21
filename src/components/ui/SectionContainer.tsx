@@ -12,7 +12,7 @@ const Container = styled.div`
   min-height: 100vh;
   gap: 4rem;
   padding: 0 2%;
-  margin: 0 auto;
+  margin: 2rem auto;
 `;
 
 const SectionContainer = ({ children, id }: Props) => {
