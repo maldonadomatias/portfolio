@@ -15,7 +15,6 @@ const Card = styled.div`
   padding: 1rem;
   width: 24%;
   min-width: 300px;
-  
 
   &:hover::before {
     opacity: 1;
@@ -65,10 +64,11 @@ const Content = styled.div`
   background-color: var(--background-color);
   border-radius: inherit;
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
   flex-grow: 1;
   inset: 1px;
-  padding: 10px;
+  padding: 0.5rem 1rem;
   position: absolute;
   z-index: 2;
 `;
@@ -80,7 +80,6 @@ const CardContainer = styled.div`
   width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
-  height: 100%;
 
   &:hover > ${Card}::after {
     opacity: 1;
