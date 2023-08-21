@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Fade } from "react-awesome-reveal";
 
 const TextContainer = styled.div`
   width: 100%;
@@ -27,7 +28,9 @@ const TitleUI = ({ title }: Props) => {
   return (
     <TextContainer>
       <h4>{title}</h4>
-      <Line />
+      <Fade direction="left" duration={700} triggerOnce>
+        <Line />
+      </Fade>
     </TextContainer>
   );
 };
