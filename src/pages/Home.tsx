@@ -1,5 +1,6 @@
 import HomeSideBar from "../components/ui/HomeSideBar/HomeSideBar";
 import AboutMe from "../components/views/AboutMe/AboutMe";
+import Projects from "../components/views/Projects/Projects";
 import Welcome from "../components/views/Welcome/Welcome";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <HomeSideBar />
       <Welcome />
       <AboutMe />
+      <Projects />
     </>
   );
 };
