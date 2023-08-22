@@ -27,7 +27,7 @@ const SidebarContainer = styled.div`
     transform: none;
     width: 100%;
     background-color: var(--background-color);
-    border-top: 1px solid var(--foreground-color);
+    border-top: 1px solid var(--shadow-color);
   }
 `;
 
@@ -97,6 +97,7 @@ const NavItem = styled.li`
       display: block;
       font-size: 2rem;
       transition: all 0.2s ease-in-out;
+      color: var(--foreground-color);
 
       &:active {
         transform: scale(0.9);
@@ -123,13 +124,22 @@ const Line = styled.div<{ position: number }>`
 
   @media (max-width: 690px) {
     /* Mobile styles */
-    display: none;
+    transform: none;
+    top: -80%;
+    width: 60px;
+    height: 3px;
+    box-shadow: 0px 0px 10px 2px var(--foreground-color);
+    left: ${({ position }) => (position === 0 ? `2.5%` : `${position * 28}%`)};
+    transition: left 0.3s ease-in-out;
   }
 `;
 
 const HomeSideBar = () => {
   // State variable to track the active section index
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
+  console.log('====================================');
+  console.log(activeSectionIndex);
+  console.log('====================================');
 
   return (
     <SidebarContainer>
