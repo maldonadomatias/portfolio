@@ -19,7 +19,7 @@ const SidebarContainer = styled.div`
 
   @media (max-width: 690px) {
     /* Mobile styles */
-    padding: 20px 10px;
+    padding: 30px 10px;
     position: fixed;
     bottom: 0;
     top: unset;
