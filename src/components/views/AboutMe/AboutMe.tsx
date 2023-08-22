@@ -78,7 +78,7 @@ const AboutMe = () => {
     <SectionContainer id="about-me">
       <TitleUI title="about me" />
       <InfoContainer>
-        <img src={IMAGE_PATHS.matias} alt="profile" />
+        <img src={IMAGE_PATHS.matias_draw} alt="profile" />
         <div>
           <h3>Matias Maldonado</h3>
           <p>
