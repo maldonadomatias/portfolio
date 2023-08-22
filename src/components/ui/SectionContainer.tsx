@@ -11,7 +11,7 @@ const Container = styled.div`
   max-width: 1600px;
   min-height: 100vh;
   gap: 4rem;
-  padding: 0 2%;
+  padding: 0 5%;
   margin: 2rem auto;
 `;
 

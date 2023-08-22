@@ -9,15 +9,16 @@ const SidebarContainer = styled.div`
   z-index: 100;
   transform: translate(0, -50%);
   top: 50%;
-  right: 2%;
+  right: 1%;
   width: fit-content;
   height: fit-content;
-  padding: 40px 20px;
+  padding: 40px 0px;
   box-sizing: border-box;
   color: var(--foreground-color);
 
   @media (max-width: 690px) {
     /* Mobile styles */
+    padding: 20px 10px;
     position: fixed;
     bottom: 0;
     top: unset;
@@ -25,7 +26,7 @@ const SidebarContainer = styled.div`
     transform: none;
     width: 100%;
     background-color: var(--background-color);
-    box-shadow: 0px -5px 15px var(--shadow-color);
+    border-top: 1px solid var(--foreground-color);
   }
 `;
 
