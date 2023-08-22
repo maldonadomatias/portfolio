@@ -13,6 +13,12 @@ const Container = styled.div`
   gap: 4rem;
   padding: 0 5%;
   margin: 2rem auto;
+
+  @media (max-width: 690px) {
+    /* Mobile styles */
+    padding: 0 3%;
+    gap: 2rem;
+  }
 `;
 
 const SectionContainer = ({ children, id }: Props) => {

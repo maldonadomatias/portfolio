@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { Link } from "react-scroll";
 import { navbarData } from "../../../constants/navbar";
+import { IconButton } from "@mui/material";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -18,7 +19,7 @@ const SidebarContainer = styled.div`
 
   @media (max-width: 690px) {
     /* Mobile styles */
-    padding: 30px 10px;
+    padding: 20px 10px;
     position: fixed;
     bottom: 0;
     top: unset;
@@ -145,7 +146,7 @@ const HomeSideBar = () => {
             >
               <NavItem>
                 <p>{item.name}</p>
-                {item.icon}
+                <IconButton>{item.icon}</IconButton>
               </NavItem>
             </Link>
           ))}
