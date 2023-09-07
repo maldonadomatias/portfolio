@@ -97,6 +97,7 @@ const NavItem = styled.li`
       display: block;
       font-size: 2rem;
       transition: all 0.2s ease-in-out;
+      color: var(--foreground-color);
 
       &:active {
         transform: scale(0.9);
