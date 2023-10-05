@@ -38,7 +38,7 @@ const Frame = styled.div`
   top: 50%;
   left: 50%;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;

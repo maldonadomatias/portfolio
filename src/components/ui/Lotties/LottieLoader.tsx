@@ -6,7 +6,7 @@ import loader from "../../../assets/lotties/loader.json";
 const Container = styled.div`
   position: fixed;
   top: 0;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   background-color: var(--background-color);
   z-index: 1000;
