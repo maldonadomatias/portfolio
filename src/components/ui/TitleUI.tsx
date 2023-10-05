@@ -18,6 +18,11 @@ const Line = styled.div`
   height: 10px;
   background-color: var(--foreground-color);
   border-radius: 3px;
+
+  @media (max-width: 690px) {
+    height: 6px;
+    width: 12%;
+  }
 `;
 
 interface Props {

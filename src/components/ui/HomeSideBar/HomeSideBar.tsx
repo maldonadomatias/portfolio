@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { navbarData } from "../../../constants/navbar";
 import { IconButton } from "@mui/material";
+import { motion } from "framer-motion";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -19,7 +20,8 @@ const SidebarContainer = styled.div`
 
   @media (max-width: 690px) {
     /* Mobile styles */
-    padding: 30px 10px;
+    height: 70px;
+    padding: 0;
     position: fixed;
     bottom: 0;
     top: unset;
@@ -123,15 +125,22 @@ const Line = styled.div<{ position: number }>`
   transition: top 0.3s ease-in-out;
 
   @media (max-width: 690px) {
+    display: none;
+  }
+`;
+
+const NavItemLine = styled(motion.div)`
+  display: none;
+
+  @media (max-width: 690px) {
+    position: absolute;
+    top: 0;
+    display: block;
+    background-color: var(--foreground-color);
     /* Mobile styles */
-    transform: none;
-    top: unset;
-    bottom: 30px;
+    border-radius: 3px;
+    height: 5px;
     width: 60px;
-    height: 3px;
-    box-shadow: 0px 0px 10px 2px var(--foreground-color);
-    left: ${({ position }) => (position === 0 ? `9.5px` : `${position * 102}px`)};
-    transition: left 0.3s ease-in-out;
   }
 `;
 
@@ -153,6 +162,17 @@ const HomeSideBar = () => {
               duration={500}
             >
               <NavItem>
+                {activeSectionIndex === index && (
+                  <NavItemLine
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.25,
+                      ease: [0, 0.71, 0.2, 2.01],
+                    }}
+                  />
+                )}
                 <p>{item.name}</p>
                 <IconButton>{item.icon}</IconButton>
               </NavItem>

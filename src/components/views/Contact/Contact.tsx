@@ -18,7 +18,7 @@ const FormContainer = styled.div`
   width: 100%;
   max-width: 450px;
   height: fit-content;
-  padding: 2% 3%;
+  padding: 5% 3%;
   border: 2px solid var(--shadow-color);
   border-radius: 10px;
   gap: 1rem;
@@ -36,6 +36,7 @@ const Input = styled.input`
   padding: 10px;
   border: none;
   width: 100%;
+  font-size: 1rem;
 `;
 
 const Contact = () => {

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { isIOS } from "react-device-detect";
 
 import Navbar from "../Navbar/Navbar";
 
@@ -11,7 +12,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  min-height: 100dvh;
+  min-height: ${isIOS ? "100dvh" : "100vh"};
   width: 100%;
   color: var(--foreground-color);
   padding: 0 2%;
