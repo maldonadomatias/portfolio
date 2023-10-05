@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import "./Welcome.css";
+import { motion } from "framer-motion";
+
 import Navbar from "../Navbar/Navbar";
+
+import "./Welcome.css";
 
 const Container = styled.div`
   display: flex;
@@ -14,7 +17,7 @@ const Container = styled.div`
   padding: 0 2%;
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 3.5rem;
   font-weight: 700;
 `;
@@ -23,7 +26,15 @@ const Welcome = () => {
   return (
     <Container id="home">
       <Navbar />
-      <Title>
+      <Title
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         matias{" "}
         <div className="main">
           <span>m</span>

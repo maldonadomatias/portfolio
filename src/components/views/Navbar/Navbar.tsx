@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useTheme } from "../../../context/theme-context";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -30,7 +31,15 @@ const Navbar = () => {
   };
 
   return (
-    <Container>
+    <Container
+      initial={{ top: -100 }}
+      animate={{ top: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <Logo>mm.</Logo>
       <ThemeMode onClick={handleClick}>
         {theme === "light" ? "dark" : "light"} mode.
