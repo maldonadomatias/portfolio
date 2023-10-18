@@ -23,6 +23,12 @@ const Title = styled(motion.h1)`
   font-weight: 700;
 `;
 
+const SpanLetter = styled.span`
+  line-height: 0.7;
+  font-size: 3.5rem;
+  font-weight: 700;
+`;
+
 const Welcome = () => {
   return (
     <Container id="home">
@@ -38,19 +44,19 @@ const Welcome = () => {
       >
         matias{" "}
         <div className="main">
-          <span>m</span>
-          <span>a</span>
-          <span>l</span>
-          <span>d</span>
-          <span className="letter">
+          <SpanLetter>m</SpanLetter>
+          <SpanLetter>a</SpanLetter>
+          <SpanLetter>l</SpanLetter>
+          <SpanLetter>d</SpanLetter>
+          <SpanLetter className="letter">
             <span className="inside-letter">front-end.web(developer)</span>
-          </span>
-          <span className="mobile-letter">o</span>
-          <span>n</span>
-          <span>a</span>
-          <span>d</span>
-          <span>o</span>
-          <span>.</span>
+          </SpanLetter>
+          <SpanLetter className="mobile-letter">o</SpanLetter>
+          <SpanLetter>n</SpanLetter>
+          <SpanLetter>a</SpanLetter>
+          <SpanLetter>d</SpanLetter>
+          <SpanLetter>o</SpanLetter>
+          <SpanLetter>.</SpanLetter>
         </div>
       </Title>
     </Container>
