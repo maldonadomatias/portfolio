@@ -9,6 +9,7 @@ import CardsHover from "./CardsHover";
 import { slideUp } from "../../../animations/animation";
 import { useRef } from "react";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
+import Magnetic from "../../ui/Magnetic/Magnetic";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -63,17 +64,61 @@ const InfoList = styled.ul`
   gap: 1rem;
 
   li {
-    font-weight: 300;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       color: var(--hover-color);
     }
   }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
 
   @media (max-width: 690px) {
     /* Mobile styles */
     align-self: flex-end;
+  }
+`;
+
+const Burger = styled.div`
+  position: relative;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+  }
+`;
+
+const Bounds = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transition: all 0.1s ease-out;
+    transform: scale(3);
+
+    svg {
+      max-width: 15px;
+      max-height: 15px;
+    }
   }
 `;
 
@@ -137,13 +182,31 @@ const AboutMe = () => {
           </Body>
           <InfoList>
             <li>
-              <GitHub />
+              <Magnetic>
+                <Burger>
+                  <Bounds>
+                    <GitHub />
+                  </Bounds>
+                </Burger>
+              </Magnetic>
             </li>
             <li>
-              <Email />
+              <Magnetic>
+                <Burger>
+                  <Bounds>
+                    <Email />
+                  </Bounds>
+                </Burger>
+              </Magnetic>
             </li>
             <li>
-              <LinkedIn />
+              <Magnetic>
+                <Burger>
+                  <Bounds>
+                    <LinkedIn />
+                  </Bounds>
+                </Burger>
+              </Magnetic>
             </li>
           </InfoList>
         </Description>

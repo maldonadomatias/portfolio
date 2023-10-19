@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import { navbarData } from "../../../constants/navbar";
 import { IconButton } from "@mui/material";
 import { motion } from "framer-motion";
+import Magnetic from "../Magnetic/Magnetic";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -152,30 +153,31 @@ const HomeSideBar = () => {
       <NavListContainer>
         <NavList>
           {navbarData.map((item, index) => (
-            <Link
-              key={index}
-              onSetActive={() => setActiveSectionIndex(index)}
-              to={item.link}
-              smooth
-              spy
-              duration={500}
-            >
-              <NavItem>
-                {activeSectionIndex === index && (
-                  <NavItemLine
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: 0.25,
-                      ease: [0, 0.71, 0.2, 2.01],
-                    }}
-                  />
-                )}
-                <p>{item.name}</p>
-                <IconButton>{item.icon}</IconButton>
-              </NavItem>
-            </Link>
+            <Magnetic key={index}>
+              <Link
+                onSetActive={() => setActiveSectionIndex(index)}
+                to={item.link}
+                smooth
+                spy
+                duration={500}
+              >
+                <NavItem>
+                  {activeSectionIndex === index && (
+                    <NavItemLine
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.25,
+                        ease: [0, 0.71, 0.2, 2.01],
+                      }}
+                    />
+                  )}
+                  <p>{item.name}</p>
+                  <IconButton>{item.icon}</IconButton>
+                </NavItem>
+              </Link>
+            </Magnetic>
           ))}
         </NavList>
         <Line position={activeSectionIndex} />
