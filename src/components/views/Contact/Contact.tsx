@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import SectionContainer from "../../ui/SectionContainer";
 import TitleUI from "../../ui/TitleUI";
 import Button from "../../ui/Button";
+import Spacing from "../../../constants/Spacing";
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const FormContainer = styled.div`
   height: fit-content;
   padding: 5% 3%;
   border: 2px solid var(--shadow-color);
-  border-radius: 10px;
+  border-radius: ${Spacing}px;
   gap: 1rem;
 
   h3 {

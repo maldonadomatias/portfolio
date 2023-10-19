@@ -1,10 +1,11 @@
 import React from "react";
 import { styled } from "styled-components";
+import Spacing from "../../../constants/Spacing";
 
 const Card = styled.div`
   background-color: var(--shadow-color);
   color: var(--foreground-color);
-  border-radius: 10px;
+  border-radius: ${Spacing}px;
   display: flex;
   justify-content: center;
   align-items: center;

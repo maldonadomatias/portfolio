@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
+import Spacing from "../../constants/Spacing";
 
 const TextContainer = styled.div`
   width: 100%;
@@ -17,7 +18,7 @@ const Line = styled.div`
   width: 8%;
   height: 10px;
   background-color: var(--foreground-color);
-  border-radius: 3px;
+  border-radius: ${Spacing}px;
 
   @media (max-width: 690px) {
     height: 6px;

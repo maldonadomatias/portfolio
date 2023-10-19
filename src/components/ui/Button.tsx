@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Spacing from "../../constants/Spacing";
 
 const Container = styled.button`
   border: none;
   padding: 0.5rem 2rem;
-  border-radius: 10px;
+  border-radius: ${Spacing}px;
   width: fit-content;
   font-size: 1rem;
   background-color: var(--foreground-color);

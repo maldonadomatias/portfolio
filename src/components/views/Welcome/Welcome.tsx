@@ -5,6 +5,7 @@ import { isIOS } from "react-device-detect";
 import Navbar from "../Navbar/Navbar";
 
 import "./Welcome.css";
+import Spacing from "../../../constants/Spacing";
 
 const Container = styled.div`
   display: flex;
@@ -48,7 +49,10 @@ const Welcome = () => {
           <SpanLetter>a</SpanLetter>
           <SpanLetter>l</SpanLetter>
           <SpanLetter>d</SpanLetter>
-          <SpanLetter className="letter">
+          <SpanLetter
+            className="letter"
+            style={{ borderRadius: `${Spacing * 2}px` }}
+          >
             <span className="inside-letter">front-end.web(developer)</span>
           </SpanLetter>
           <SpanLetter className="mobile-letter">o</SpanLetter>

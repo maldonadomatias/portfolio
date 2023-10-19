@@ -6,6 +6,7 @@ import { navbarData } from "../../../constants/navbar";
 import { IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import Magnetic from "../Magnetic/Magnetic";
+import Spacing from "../../../constants/Spacing";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -113,7 +114,7 @@ const NavItem = styled.li`
 `;
 
 const Line = styled.div<{ position: number }>`
-  border-radius: 3px;
+  border-radius: ${Spacing}px;
   width: 30px;
   height: 7px;
   background-color: var(--foreground-color);
@@ -138,7 +139,7 @@ const NavItemLine = styled(motion.div)`
     display: block;
     background-color: var(--foreground-color);
     /* Mobile styles */
-    border-radius: 3px;
+    border-radius: ${Spacing}px;
     height: 5px;
     width: 60px;
   }
