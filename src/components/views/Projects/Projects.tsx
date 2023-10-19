@@ -9,6 +9,10 @@ const Container = styled.div`
   height: 100vh;
   background-color: var(--background-color);
   color: var(--foreground-color);
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 const Projects = () => {
