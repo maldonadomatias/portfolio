@@ -138,3 +138,13 @@ input:-internal-autofill-selected {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Three JS */
+
+.htmlScreen iframe {
+  width: 1024px;
+  height: 670px;
+  border: none;
+  border-radius: 20px;
+  background: #000000;
+}
