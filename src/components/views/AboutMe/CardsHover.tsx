@@ -5,7 +5,6 @@ const Card = styled.div`
   background-color: var(--shadow-color);
   color: var(--foreground-color);
   border-radius: 10px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

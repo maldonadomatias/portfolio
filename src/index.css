@@ -36,6 +36,7 @@ a {
 }
 
 body {
+  cursor: none;
   margin: 0;
   display: flex;
   place-items: center;

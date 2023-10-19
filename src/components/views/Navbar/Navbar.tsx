@@ -20,7 +20,6 @@ const Logo = styled.div`
 const ThemeMode = styled.div`
   font-size: 1rem;
   font-weight: 500;
-  cursor: pointer;
 `;
 
 const Navbar = () => {

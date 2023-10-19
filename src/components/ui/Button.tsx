@@ -11,7 +11,6 @@ const Container = styled.button`
   color: var(--background-color);
   font-family: "Manrope", sans-serif;
   font-weight: 600;
-  cursor: pointer;
 
   &:hover {
     background-color: var(--shadow-color);

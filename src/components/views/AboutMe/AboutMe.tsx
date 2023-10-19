@@ -64,7 +64,6 @@ const InfoList = styled.ul`
 
   li {
     font-weight: 300;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
 
     &:hover {

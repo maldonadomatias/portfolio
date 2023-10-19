@@ -79,7 +79,6 @@ const NavItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   color: var(--foreground-color);
   transition: all 0.2s ease-in-out;
 

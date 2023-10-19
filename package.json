@@ -22,6 +22,7 @@
     "r3f-perf": "^7.1.2",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",
+    "react-creative-cursor": "^1.2.7",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
