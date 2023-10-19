@@ -8,6 +8,7 @@ import { IMAGE_PATHS } from "../../../constants/imagePaths";
 import CardsHover from "./CardsHover";
 import { slideUp } from "../../../animations/animation";
 import { useRef } from "react";
+import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -93,7 +94,7 @@ const Body = styled.div`
       span {
         margin-right: 3px;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       .mask {
         position: relative;
@@ -106,7 +107,7 @@ const Body = styled.div`
 
 const AboutMe = () => {
   const phrase =
-    "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    "Hey there! I'm Matias, a frontend developer passionate about blending technology with human emotions. I see website creation as an art form, where every line of code and pixel is meticulously crafted to evoke emotions and engage users in a visually stunning digital masterpiece. My focus? Creating more than websites; I design emotional journeys. Let's transform your ideas into unforgettable digital adventures.";
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -136,9 +137,15 @@ const AboutMe = () => {
             </p>
           </Body>
           <InfoList>
-            <li>Github</li>
-            <li>Email</li>
-            <li>Linkedin</li>
+            <li>
+              <GitHub />
+            </li>
+            <li>
+              <Email />
+            </li>
+            <li>
+              <LinkedIn />
+            </li>
           </InfoList>
         </Description>
       </InfoContainer>
