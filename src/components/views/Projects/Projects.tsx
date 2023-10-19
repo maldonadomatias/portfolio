@@ -20,7 +20,7 @@ const Projects = () => {
     <SectionContainer id="projects">
       <TitleUI title="projects" />
       <Container>
-        <Canvas
+        {/* <Canvas
           camera={{
             fov: 45,
             near: 0.1,
@@ -29,7 +29,7 @@ const Projects = () => {
           }}
         >
           <Experience />
-        </Canvas>
+        </Canvas> */}
       </Container>
     </SectionContainer>
   );

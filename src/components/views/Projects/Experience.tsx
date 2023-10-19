@@ -47,7 +47,7 @@ export default function Experience() {
               position={[0, 1.56, -1.4]}
               rotation-x={-0.256}
             >
-              <iframe src="https://rigz.xyz/" />
+              <iframe src="https://chat-ai-sage.vercel.app/" />
             </Html>
           </primitive>
         </Float>
