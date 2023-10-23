@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { projects } from "../../../constants/aboutMe";
+import CustomModal from "../../ui/CustomModal";
+
+import CardProject from "./CardProject";
 
 const Gallery = styled.div``;
 
@@ -73,7 +76,7 @@ const anim = {
   closed: { width: 0 },
 };
 
-const Project = ({ project }: any) => {
+const Project = ({ project, open }: any) => {
   const { title1, title2, src } = project;
   const [isActive, setIsActive] = useState(false);
 
@@ -89,6 +92,7 @@ const Project = ({ project }: any) => {
     <ProjectContainer
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={open}
     >
       <p>{title1}</p>
       <ImageContainer variants={anim} animate={isActive ? "open" : "closed"}>
@@ -100,10 +104,14 @@ const Project = ({ project }: any) => {
 };
 
 const Experience = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <Gallery>
+      <CustomModal open={openModal} onClose={() => setOpenModal(false)}>
+        <CardProject />
+      </CustomModal>
       {projects.map((project, i) => (
-        <Project key={i} project={project} />
+        <Project key={i} project={project} open={() => setOpenModal(true)} />
       ))}
     </Gallery>
   );
