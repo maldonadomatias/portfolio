@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-import { IMAGE_PATHS } from "../../../constants/imagePaths";
-import Spacing from "../../../constants/Spacing";
+import { IMAGE_PATHS } from "../../../../constants/imagePaths";
+import Spacing from "../../../../constants/Spacing";
 
 const images = [
   IMAGE_PATHS.project_1,
@@ -29,7 +29,7 @@ const Container = styled.div`
   box-sizing: border-box;
   overflow: hidden;
   border-radius: ${Spacing}px;
-  box-shadow: 0 0 10px 10px var(--shadow-color);
+  border: 2px solid var(--shadow-color);
 `;
 
 const ColumnAnimation = styled(motion.div)`

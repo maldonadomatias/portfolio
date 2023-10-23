@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-export default function Magnetic({ children }: Props) {
+export default function Magnetic({ children, style }: Props) {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -24,7 +25,7 @@ export default function Magnetic({ children }: Props) {
   const { x, y } = position;
   return (
     <motion.div
-      style={{ position: "relative" }}
+      style={{ position: "relative", ...style }}
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}

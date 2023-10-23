@@ -10,6 +10,7 @@ import { slideUp } from "../../../animations/animation";
 import { useRef } from "react";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import Magnetic from "../../ui/Magnetic/Magnetic";
+import Experience from "./Experience";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -212,6 +213,7 @@ const AboutMe = () => {
         </Description>
       </InfoContainer>
       <CardsHover data={aboutSmallData} />
+      <Experience />
     </SectionContainer>
   );
 };

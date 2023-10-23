@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
-
 import { Link } from "react-scroll";
-import { navbarData } from "../../../constants/navbar";
-import { IconButton } from "@mui/material";
 import { motion } from "framer-motion";
-import Magnetic from "../Magnetic/Magnetic";
+import { IconButton } from "@mui/material";
+
+import { navbarData } from "../../../constants/navbar";
 import Spacing from "../../../constants/Spacing";
 
 const SidebarContainer = styled.div`
@@ -135,7 +134,7 @@ const NavItemLine = styled(motion.div)`
 
   @media (max-width: 690px) {
     position: absolute;
-    top: 0;
+    top: -2px;
     display: block;
     background-color: var(--foreground-color);
     /* Mobile styles */
@@ -154,31 +153,33 @@ const HomeSideBar = () => {
       <NavListContainer>
         <NavList>
           {navbarData.map((item, index) => (
-            <Magnetic key={index}>
-              <Link
-                onSetActive={() => setActiveSectionIndex(index)}
-                to={item.link}
-                smooth
-                spy
-                duration={500}
-              >
-                <NavItem>
-                  {activeSectionIndex === index && (
-                    <NavItemLine
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{
-                        duration: 0.8,
-                        delay: 0.25,
-                        ease: [0, 0.71, 0.2, 2.01],
-                      }}
-                    />
-                  )}
-                  <p>{item.name}</p>
-                  <IconButton>{item.icon}</IconButton>
-                </NavItem>
-              </Link>
-            </Magnetic>
+            <Link
+              onSetActive={() => setActiveSectionIndex(index)}
+              to={item.link}
+              smooth
+              spy
+              duration={500}
+              key={index}
+              style={{
+                height: "100%",
+              }}
+            >
+              <NavItem>
+                {activeSectionIndex === index && (
+                  <NavItemLine
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.25,
+                      ease: [0, 0.71, 0.2, 2.01],
+                    }}
+                  />
+                )}
+                <p>{item.name}</p>
+                <IconButton>{item.icon}</IconButton>
+              </NavItem>
+            </Link>
           ))}
         </NavList>
         <Line position={activeSectionIndex} />

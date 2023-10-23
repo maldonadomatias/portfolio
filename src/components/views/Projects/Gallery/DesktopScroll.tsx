@@ -30,7 +30,7 @@ const Container = styled.div`
   box-sizing: border-box;
   overflow: hidden;
   border-radius: ${Spacing}px;
-  box-shadow: 0 0 10px 10px var(--shadow-color);
+  border: 2px solid var(--shadow-color);
 `;
 
 const ColumnAnimation = styled(motion.div)`
@@ -85,7 +85,7 @@ export default function DesktopScroll() {
   useEffect(() => {
     const lenis = new Lenis();
 
-    const raf = (time) => {
+    const raf = (time: any) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };

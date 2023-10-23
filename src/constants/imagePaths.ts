@@ -12,6 +12,9 @@ import PROJECT_9 from "../assets/images/projects/9.jpg";
 import PROJECT_10 from "../assets/images/projects/10.jpg";
 import PROJECT_11 from "../assets/images/projects/11.jpg";
 import PROJECT_12 from "../assets/images/projects/12.jpg";
+import TTM_LOGO from "../assets/images/TTM_logo.png";
+import WAIS_LOGO from "../assets/images/wais_logo.png";
+import PUBLY_LOGO from "../assets/images/publy_logo.png";
 
 export const IMAGE_PATHS = {
   matias: MATIAS,
@@ -28,4 +31,7 @@ export const IMAGE_PATHS = {
   project_10: PROJECT_10,
   project_11: PROJECT_11,
   project_12: PROJECT_12,
+  ttm_logo: TTM_LOGO,
+  wais_logo: WAIS_LOGO,
+  publy_logo: PUBLY_LOGO,
 };
