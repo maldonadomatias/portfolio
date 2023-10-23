@@ -16,6 +16,23 @@ import TTM_LOGO from "../assets/images/TTM_logo.png";
 import WAIS_LOGO from "../assets/images/wais_logo.png";
 import PUBLY_LOGO from "../assets/images/publy_logo.png";
 
+import TTM_1 from "../assets/images/projects/ttm_1.png";
+import TTM_2 from "../assets/images/projects/ttm_2.png";
+import TTM_3 from "../assets/images/projects/ttm_3.png";
+import TTM_4 from "../assets/images/projects/ttm_4.png";
+import TTM_5 from "../assets/images/projects/ttm_5.png";
+
+import WAIS_1 from "../assets/images/projects/wais_1.png";
+import WAIS_2 from "../assets/images/projects/wais_2.png";
+import WAIS_3 from "../assets/images/projects/wais_3.png";
+import WAIS_4 from "../assets/images/projects/wais_4.png";
+import WAIS_5 from "../assets/images/projects/wais_5.png";
+
+import PUBLY_1 from "../assets/images/projects/publy_1.png";
+import PUBLY_2 from "../assets/images/projects/publy_2.png";
+import PUBLY_3 from "../assets/images/projects/publy_3.png";
+import PUBLY_4 from "../assets/images/projects/publy_4.png";
+
 export const IMAGE_PATHS = {
   matias: MATIAS,
   matias_draw: MATIAS_DRAW,
@@ -34,4 +51,18 @@ export const IMAGE_PATHS = {
   ttm_logo: TTM_LOGO,
   wais_logo: WAIS_LOGO,
   publy_logo: PUBLY_LOGO,
+  ttm_1: TTM_1,
+  ttm_2: TTM_2,
+  ttm_3: TTM_3,
+  ttm_4: TTM_4,
+  ttm_5: TTM_5,
+  wais_1: WAIS_1,
+  wais_2: WAIS_2,
+  wais_3: WAIS_3,
+  wais_4: WAIS_4,
+  wais_5: WAIS_5,
+  publy_1: PUBLY_1,
+  publy_2: PUBLY_2,
+  publy_3: PUBLY_3,
+  publy_4: PUBLY_4,
 };

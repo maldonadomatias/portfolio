@@ -1,16 +1,18 @@
+import { useRef } from "react";
 import { styled } from "styled-components";
 import { motion, useInView } from "framer-motion";
+import { Email, GitHub, LinkedIn } from "@mui/icons-material";
+
+import { aboutSmallData } from "../../../constants/aboutMe";
+import { IMAGE_PATHS } from "../../../constants/imagePaths";
+import { slideUp } from "../../../animations/animation";
 
 import SectionContainer from "../../ui/SectionContainer";
 import TitleUI from "../../ui/TitleUI";
-import { aboutSmallData } from "../../../constants/aboutMe";
-import { IMAGE_PATHS } from "../../../constants/imagePaths";
 import CardsHover from "./CardsHover";
-import { slideUp } from "../../../animations/animation";
-import { useRef } from "react";
-import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import Magnetic from "../../ui/Magnetic/Magnetic";
 import Experience from "./Experience";
+import Spacing from "../../../constants/Spacing";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -25,23 +27,9 @@ const InfoContainer = styled.div`
     width: 300px;
     height: 300px;
     aspect-ratio: 1/1;
-    border-radius: 50%;
+    border-radius: ${Spacing}px;
     object-fit: cover;
     border: 3px solid var(--shadow-color);
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    h3 {
-      font-weight: 400;
-    }
-
-    p {
-      font-weight: 200;
-    }
   }
 
   @media (max-width: 690px) {
@@ -126,6 +114,16 @@ const Bounds = styled.div`
 const Description = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  h3 {
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 200;
+  }
 `;
 
 const Body = styled.div`

@@ -105,13 +105,20 @@ const Project = ({ project, open }: any) => {
 
 const Experience = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [activeProject, setActiveProject] = useState(0);
+
+  const handleOpenModal = (index: number) => {
+    setActiveProject(index);
+    setOpenModal(true);
+  };
+
   return (
     <Gallery>
       <CustomModal open={openModal} onClose={() => setOpenModal(false)}>
-        <CardProject />
+        <CardProject project={projects[activeProject]} />
       </CustomModal>
       {projects.map((project, i) => (
-        <Project key={i} project={project} open={() => setOpenModal(true)} />
+        <Project key={i} project={project} open={() => handleOpenModal(i)} />
       ))}
     </Gallery>
   );
