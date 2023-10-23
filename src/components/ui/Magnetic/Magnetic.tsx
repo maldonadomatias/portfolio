@@ -7,15 +7,18 @@ interface Props {
 }
 
 export default function Magnetic({ children, style }: Props) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null); // Specify the type of ref
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
-    const { height, width, left, top } = ref.current.getBoundingClientRect();
-    const middleX = clientX - (left + width / 2);
-    const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX * 0.1, y: middleY * 0.1 });
+    const boundingBox = ref.current?.getBoundingClientRect(); // Use optional chaining
+    if (boundingBox) {
+      const { height, width, left, top } = boundingBox;
+      const middleX = clientX - (left + width / 2);
+      const middleY = clientY - (top + height / 2);
+      setPosition({ x: middleX * 0.1, y: middleY * 0.1 });
+    }
   };
 
   const reset = () => {
