@@ -3,6 +3,61 @@ import { LiaConnectdevelop } from "react-icons/lia";
 import { CiMobile3 } from "react-icons/ci";
 
 import { IMAGE_PATHS } from "./imagePaths";
+import {
+  RiAppStoreFill,
+  RiGooglePlayFill,
+  RiReactjsFill,
+} from "react-icons/ri";
+import {
+  SiAdobephotoshop,
+  SiAdobexd,
+  SiChatbot,
+  SiDocker,
+  SiFigma,
+  SiFirebase,
+  SiNextdotjs,
+  SiStyledcomponents,
+  SiTypescript,
+} from "react-icons/si";
+import {
+  Animation,
+  Css,
+  DeveloperMode,
+  Download,
+  Email,
+  GitHub,
+  Html,
+  LinkedIn,
+  Movie,
+  SportsSoccer,
+} from "@mui/icons-material";
+
+export const socialMediaLinks = [
+  {
+    id: 1,
+    title: "Github",
+    icon: <GitHub />,
+    tooltip: "Github Profile",
+  },
+  {
+    id: 2,
+    title: "Email",
+    icon: <Email />,
+    tooltip: "Email Address",
+  },
+  {
+    id: 3,
+    title: "LinkedIn",
+    icon: <LinkedIn />,
+    tooltip: "LinkedIn Profile",
+  },
+  {
+    id: 4,
+    title: "Download CV",
+    icon: <Download />,
+    tooltip: "Download Curriculum Vitae",
+  },
+];
 
 export const aboutSmallData = [
   {
@@ -32,58 +87,107 @@ export interface Project {
   title2: string;
   description: string;
   src?: string;
-  images: string[];
+  list?: string[];
+  tech?: any[];
+  projects?: any[];
 }
 
 export const projects: Project[] = [
   {
     title1: "to the",
     title2: "moon inc.",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "nft marketplace and crypto e-commerce.",
     src: IMAGE_PATHS.ttm_logo,
-    images: [
-      IMAGE_PATHS.ttm_1,
-      IMAGE_PATHS.ttm_2,
-      IMAGE_PATHS.ttm_3,
-      IMAGE_PATHS.ttm_4,
-      IMAGE_PATHS.ttm_5,
+    list: [
+      "10+ websites created for TTM, including admin dashboards, crypto e-commerce, and landing pages.",
+      "Wireframe design of all websites and components in Figma and Adobe XD.",
+      "Code reviews and contributed to continuous integration and deployment processes.",
+      "Implement good practices in the development (responsive, UX)",
+    ],
+    tech: [
+      { icon: <RiReactjsFill />, name: "React.js" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiAdobexd />, name: "Adobe XD" },
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <Html />, name: "HTML" },
+      { icon: <Css />, name: "CSS" },
+      { icon: <SiStyledcomponents />, name: "Styled Components" },
+      { icon: <Animation />, name: "Framer Motion" },
     ],
   },
   {
     title1: "wais",
     title2: "data",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "data driven solutions.",
     src: IMAGE_PATHS.wais_logo,
-    images: [
-      IMAGE_PATHS.wais_1,
-      IMAGE_PATHS.wais_2,
-      IMAGE_PATHS.wais_3,
-      IMAGE_PATHS.wais_4,
-      IMAGE_PATHS.wais_5,
+    list: [
+      "I collaborated with cross-functional teams to understand business requirements and implement solutions using web technologies such as ReactJS, Typescript, and Firebase.",
+      "Designing and developing user interfaces for data visualization and analysis.",
+      "Responsive and dynamic design for mobile and desktop.",
+    ],
+    tech: [
+      { icon: <RiReactjsFill />, name: "React.js" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiAdobexd />, name: "Adobe XD" },
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <Html />, name: "HTML" },
+      { icon: <Css />, name: "CSS" },
+      { icon: <SiDocker />, name: "Docker" },
+      { icon: <SiStyledcomponents />, name: "Styled Components" },
+      { icon: <Animation />, name: "Framer Motion" },
     ],
   },
   {
     title1: "publy",
     title2: "app",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "publish apps in google play and app store.",
     src: IMAGE_PATHS.publy_logo,
-    images: [
-      IMAGE_PATHS.publy_1,
-      IMAGE_PATHS.publy_2,
-      IMAGE_PATHS.publy_3,
-      IMAGE_PATHS.publy_4,
+    list: [
+      "end to end development of the app.",
+      "design and development of the website.",
+      "real-time metrics monitoring wth Google Play Console and App Store Connect.",
+    ],
+    tech: [
+      { icon: <Html />, name: "HTML" },
+      { icon: <Css />, name: "CSS" },
+      { icon: <RiGooglePlayFill />, name: "Google Play" },
+      { icon: <RiAppStoreFill />, name: "App Store" },
+      { icon: <SiAdobephotoshop />, name: "Adobe Photoshop" },
     ],
   },
   {
     title1: "freelance",
     title2: "projects",
-    description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    images: [
-      IMAGE_PATHS.project_1,
-      IMAGE_PATHS.project_2,
-      IMAGE_PATHS.project_3,
-      IMAGE_PATHS.project_4,
-      IMAGE_PATHS.project_5,
+    description: "click to discover my freelance projects here:",
+    projects: [
+      {
+        icon: <SportsSoccer />,
+        name: "Transferquiz",
+        description:
+          "guess the argentinian soccer player from it transfer history,",
+        link: "https://transferquiz.vercel.app/",
+      },
+      {
+        icon: <SiChatbot />,
+        name: "Chatbot",
+        description: "chatbot using chat-gpt4 api.",
+        link: "https://chat-ai-sage.vercel.app/",
+      },
+      {
+        icon: <Movie />,
+        name: "Guess the Movie",
+        description: "guess the movie from the emojis.",
+        link: "https://guess-the-movie-omega.vercel.app/",
+      },
+      {
+        icon: <DeveloperMode />,
+        name: "Portfolio",
+        description: "my personal portfolio.",
+        link: "https://matiasmaldonado.vercel.app/",
+      },
     ],
   },
 ];

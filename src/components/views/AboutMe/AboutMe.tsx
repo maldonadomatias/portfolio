@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import { styled } from "styled-components";
 import { motion, useInView } from "framer-motion";
-import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 
-import { aboutSmallData } from "../../../constants/aboutMe";
+import { aboutSmallData, socialMediaLinks } from "../../../constants/aboutMe";
 import { IMAGE_PATHS } from "../../../constants/imagePaths";
 import { slideUp } from "../../../animations/animation";
 
@@ -13,6 +12,7 @@ import CardsHover from "./CardsHover";
 import Magnetic from "../../ui/Magnetic/Magnetic";
 import Experience from "./Experience";
 import Spacing from "../../../constants/Spacing";
+import CustomTooltip from "../../ui/CustomTooltip";
 
 const InfoContainer = styled.div`
   display: flex;
@@ -180,33 +180,19 @@ const AboutMe = () => {
             </p>
           </Body>
           <InfoList>
-            <li>
-              <Magnetic>
-                <Burger>
-                  <Bounds>
-                    <GitHub />
-                  </Bounds>
-                </Burger>
-              </Magnetic>
-            </li>
-            <li>
-              <Magnetic>
-                <Burger>
-                  <Bounds>
-                    <Email />
-                  </Bounds>
-                </Burger>
-              </Magnetic>
-            </li>
-            <li>
-              <Magnetic>
-                <Burger>
-                  <Bounds>
-                    <LinkedIn />
-                  </Bounds>
-                </Burger>
-              </Magnetic>
-            </li>
+            {socialMediaLinks.map((link) => (
+              <li key={link.id}>
+                <Magnetic>
+                  <Burger>
+                    <Bounds>
+                      <CustomTooltip title={link.tooltip}>
+                        {link.icon}
+                      </CustomTooltip>
+                    </Bounds>
+                  </Burger>
+                </Magnetic>
+              </li>
+            ))}
           </InfoList>
         </Description>
       </InfoContainer>
