@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import Spacing from "../../../constants/Spacing";
 import { Project } from "../../../constants/aboutMe";
+import { Skeleton } from "@mui/material";
 
 const CardContainer = styled.div`
   background-color: var(--background-color);
@@ -44,21 +45,28 @@ const FlashcardsContainer = styled.div`
   }
 `;
 
-const Card = styled(motion.div)<{ img: string }>`
+const Card = styled(motion.div)`
   position: relative;
   display: inline-block;
   height: 300px;
   width: 300px;
-  background: url(${(props) => props.img});
   background-size: cover;
   margin: 2rem 1rem;
   border-radius: ${Spacing}px;
   cursor: pointer;
+  overflow: hidden; /* Ensure Skeleton covers the entire area */
 
   @media (max-width: 690px) {
     /* Mobile styles */
     height: 200px;
     width: 200px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: ${Spacing}px;
+    object-fit: cover;
   }
 `;
 
@@ -67,6 +75,12 @@ interface Props {
 }
 
 const Flashcards: React.FC<Props> = ({ project }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <CardContainer>
       <Title>
@@ -76,8 +90,18 @@ const Flashcards: React.FC<Props> = ({ project }) => {
         <p>{project.description}</p>
       </Title>
       <FlashcardsContainer>
-        {project.images.map((card) => (
-          <Card className="card" key={card} img={card} />
+        {project.images.map((card, index) => (
+          <Card key={index}>
+            {!imageLoaded && (
+              <Skeleton variant="rectangular" width="100%" height="100%" />
+            )}
+            <img
+              style={{ display: imageLoaded ? "block" : "none" }}
+              src={card}
+              alt="flashcard"
+              onLoad={handleImageLoad}
+            />
+          </Card>
         ))}
       </FlashcardsContainer>
     </CardContainer>
