@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import LottieLoader from "./components/ui/Lotties/LottieLoader";
 import Home from "./pages/Home";
+import Copyright from "./components/views/Copyright";
 
 function App() {
   const { theme } = useTheme();
@@ -38,9 +39,12 @@ function App() {
             <LottieLoader />
           </motion.div>
         ) : (
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+            <Copyright />
+          </>
         )}
       </AnimatePresence>
     </>

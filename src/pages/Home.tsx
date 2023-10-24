@@ -7,8 +7,10 @@ import AboutMe from "../components/views/AboutMe/AboutMe";
 import Contact from "../components/views/Contact/Contact";
 import Projects from "../components/views/Projects/Projects";
 import Welcome from "../components/views/Welcome/Welcome";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const Home = () => {
+  useDocumentTitle("matias maldonado | home");
   return (
     <>
       {!isMobile && <Cursor isGelly={true} animationDuration={0.1} />}
