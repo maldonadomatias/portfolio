@@ -23,11 +23,12 @@ interface Props {
   onClick?: () => void;
   style?: React.CSSProperties;
   children: any;
+  type?: "button" | "submit" | "reset" | undefined;
 }
 
-const Button = ({ onClick, style, children }: Props) => {
+const Button = ({ onClick, style, children, type }: Props) => {
   return (
-    <Container onClick={onClick} style={style}>
+    <Container onClick={onClick} style={style} type={type}>
       {children}
     </Container>
   );

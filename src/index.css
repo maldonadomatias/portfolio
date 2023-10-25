@@ -98,6 +98,7 @@ h6 {
   font-size: 0.5rem;
 }
 
+textarea,
 input {
   /* Disable default styling */
   appearance: none;
@@ -110,6 +111,7 @@ input {
   border-radius: 4px;
 }
 
+textarea:-internal-autofill-selected,
 input:-internal-autofill-selected {
   background-color: transparent !important;
   background-image: none !important;

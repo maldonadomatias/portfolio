@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LottieLoader from "./components/ui/Lotties/LottieLoader";
 import Home from "./pages/Home";
 import Copyright from "./components/views/Copyright";
+import CustomToaster from "./components/ui/Toaster";
 
 function App() {
   const { theme } = useTheme();
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <CustomToaster />
       <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         {loading ? (
           <motion.div
