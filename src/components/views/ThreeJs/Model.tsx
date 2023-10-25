@@ -1,11 +1,25 @@
 import * as THREE from "three";
 import { useEffect, useState } from "react";
 import { useGLTF, Float } from "@react-three/drei";
-import { useTransform } from "framer-motion";
+import { MotionValue, useTransform } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useTheme } from "../../../context/theme-context";
 
-export default function Model({ mouse }) {
+interface ModelProps {
+  mouse: {
+    x: MotionValue<any>;
+    y: MotionValue<any>;
+  };
+}
+
+interface MeshProps {
+  node: THREE.Mesh;
+  multiplier: number;
+  mouse: { x: any; y: any };
+  isActive: boolean;
+}
+
+export default function Model({ mouse }: ModelProps) {
   const [activeShape, setActiveShape] = useState(1);
 
   useEffect(() => {
@@ -18,7 +32,8 @@ export default function Model({ mouse }) {
     }, 2000);
   }, [activeShape]);
 
-  const { nodes } = useGLTF("/medias/floating_shapes4.glb");
+  const { nodes } = useGLTF("/medias/floating_shapes4.glb") as any;
+
   return (
     <group>
       <Mesh
@@ -93,14 +108,10 @@ export default function Model({ mouse }) {
 
 useGLTF.preload("/medias/floating_shapes4.glb");
 
-function Mesh({ node, multiplier, mouse, isActive }) {
+function Mesh({ node, multiplier, mouse, isActive }: MeshProps) {
   const { geometry, position, scale, rotation } = node;
 
   const { theme } = useTheme();
-
-  console.log('====================================');
-  console.log('theme', theme);
-  console.log('====================================');
 
   const material = new THREE.MeshStandardMaterial({
     color: theme === "light" ? "#ffffff" : "#000000", // Set the desired color
@@ -136,6 +147,12 @@ function Mesh({ node, multiplier, mouse, isActive }) {
     return Math.floor(Math.random() * 2) * (Math.round(Math.random()) ? 1 : -1);
   };
 
+  const animateProps = isActive
+    ? {
+        rotateZ: rotation.z + getRandomMultiplier(),
+      }
+    : {};
+
   return (
     <Float>
       <motion.mesh
@@ -150,9 +167,7 @@ function Mesh({ node, multiplier, mouse, isActive }) {
         rotation-x={rotationY}
         position-x={positionX}
         position-y={positionY}
-        animate={{
-          rotateZ: isActive ? rotation.z + getRandomMultiplier() : null,
-        }}
+        animate={animateProps}
         transition={{ type: "spring", stiffness: 75, damping: 100, mass: 3 }}
       />
     </Float>

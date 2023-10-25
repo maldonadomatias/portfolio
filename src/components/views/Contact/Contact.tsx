@@ -1,13 +1,14 @@
 import { styled } from "styled-components";
-import SectionContainer from "../../ui/SectionContainer";
-import TitleUI from "../../ui/TitleUI";
-import { Form } from "./Form";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+
 import { scrollToTop, slideUpSlow } from "../../../animations/animation";
+import TitleUI from "../../ui/TitleUI";
+import SectionContainer from "../../ui/SectionContainer";
 import Spacing from "../../../constants/Spacing";
-import Button from "../../ui/Button";
+
 import Copyright from "../Copyright";
+import { Form } from "./Form";
 
 const Container = styled.div`
   display: flex;
@@ -151,7 +152,7 @@ const Contact = () => {
           animate="visible"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          go to the top
+          reset
         </ScrollToTopButton>
         <Copyright />
       </ButtonContainer>
