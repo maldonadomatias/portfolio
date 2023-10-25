@@ -72,7 +72,8 @@ const FlashcardsContainer = styled.div`
   display: flex;
   align-items: center;
   gap: ${Spacing * 2}px;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   width: 100%;
 `;
 
@@ -101,7 +102,6 @@ const Projects = styled.div`
   min-width: 200px;
   height: 200px;
   text-align: center;
-  overflow: scroll;
 
   svg {
     width: 50px;

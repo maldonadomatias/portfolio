@@ -18,7 +18,7 @@ const StyledModal = styled(Dialog)<{ width?: string }>`
     box-shadow: none;
     width: 100%;
     max-width: ${(props) => (props.width ? props.width : "fit-content")};
-    height: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
