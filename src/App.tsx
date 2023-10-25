@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useTheme } from "./context/theme-context";
 import { Route, Routes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import LottieLoader from "./components/ui/Lotties/LottieLoader";
+
 import Home from "./pages/Home";
-import Copyright from "./components/views/Copyright";
+import LottieLoader from "./components/ui/Lotties/LottieLoader";
 import CustomToaster from "./components/ui/Toaster";
 
 function App() {
@@ -45,7 +45,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
             </Routes>
-            <Copyright />
           </>
         )}
       </AnimatePresence>

@@ -13,6 +13,7 @@ const Container = styled.div`
   gap: 4rem;
   padding: 0 5%;
   margin: 2rem auto;
+  position: relative;
 
   @media (max-width: 690px) {
     /* Mobile styles */

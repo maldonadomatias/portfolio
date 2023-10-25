@@ -8,6 +8,7 @@ import Contact from "../components/views/Contact/Contact";
 import Projects from "../components/views/Projects/Projects";
 import Welcome from "../components/views/Welcome/Welcome";
 import useDocumentTitle from "../hooks/useDocumentTitle";
+import FloatingShape from "../components/views/ThreeJs/FloatingShape";
 
 const Home = () => {
   useDocumentTitle("matias maldonado | home");
@@ -20,6 +21,7 @@ const Home = () => {
         <AboutMe />
         <Projects />
         <Contact />
+        <FloatingShape />
       </div>
     </>
   );

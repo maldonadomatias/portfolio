@@ -17,6 +17,8 @@ const FormContainer = styled.form`
   height: fit-content;
   padding: 5% 3%;
   border: 2px solid var(--shadow-color);
+  background-color: var(--background-color);
+  box-shadow: 0px 0px 10px 0px var(--shadow-color);
   border-radius: ${Spacing}px;
   gap: 1rem;
 

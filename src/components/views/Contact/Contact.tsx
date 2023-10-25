@@ -4,8 +4,10 @@ import TitleUI from "../../ui/TitleUI";
 import { Form } from "./Form";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { slideUpSlow } from "../../../animations/animation";
+import { scrollToTop, slideUpSlow } from "../../../animations/animation";
 import Spacing from "../../../constants/Spacing";
+import Button from "../../ui/Button";
+import Copyright from "../Copyright";
 
 const Container = styled.div`
   display: flex;
@@ -82,6 +84,32 @@ const Body = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
+const ScrollToTopButton = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  position: relative;
+  z-index: 1;
+  border-radius: ${Spacing}px;
+`;
+
 const Contact = () => {
   const phrase = "Let's get started on your next project.";
   const description = useRef(null);
@@ -116,6 +144,17 @@ const Contact = () => {
         </InfoContainer>
         <Form />
       </Container>
+      <ButtonContainer>
+        <ScrollToTopButton
+          variants={scrollToTop}
+          initial="hidden"
+          animate="visible"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          go to the top
+        </ScrollToTopButton>
+        <Copyright />
+      </ButtonContainer>
     </SectionContainer>
   );
 };
