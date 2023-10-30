@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { isSafari } from "react-device-detect";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { IconButton } from "@mui/material";
@@ -176,13 +177,31 @@ const HomeSideBar = () => {
                     }}
                   />
                 )}
-                <p>{item.name}</p>
+                <motion.p
+                  initial={{
+                    opacity: 0,
+                    scale: 0.5,
+                    fontWeight: activeSectionIndex === index ? 300 : 600,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    fontWeight: activeSectionIndex === index ? 600 : 300,
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.25,
+                    ease: [0, 0.71, 0.2, 2.01],
+                  }}
+                >
+                  {item.name}
+                </motion.p>
                 <IconButton>{item.icon}</IconButton>
               </NavItem>
             </Link>
           ))}
         </NavList>
-        <Line position={activeSectionIndex} />
+        {!isSafari && <Line position={activeSectionIndex} />}
       </NavListContainer>
     </SidebarContainer>
   );
