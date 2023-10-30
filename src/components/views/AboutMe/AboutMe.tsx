@@ -2,7 +2,11 @@ import { useRef } from "react";
 import { styled } from "styled-components";
 import { motion, useInView } from "framer-motion";
 
-import { aboutSmallData, socialMediaLinks } from "../../../constants/aboutMe";
+import {
+  CV,
+  aboutSmallData,
+  socialMediaLinks,
+} from "../../../constants/aboutMe";
 import { IMAGE_PATHS } from "../../../constants/imagePaths";
 import { slideUp } from "../../../animations/animation";
 
@@ -186,7 +190,13 @@ const AboutMe = () => {
                   <Burger>
                     <Bounds>
                       <CustomTooltip title={link.tooltip}>
-                        {link.icon}
+                        {link.title === "Download CV" ? (
+                          <a href={CV} download>
+                            {link.icon}
+                          </a>
+                        ) : (
+                          <div>{link.icon}</div>
+                        )}
                       </CustomTooltip>
                     </Bounds>
                   </Burger>

@@ -109,6 +109,12 @@ const ScrollToTopButton = styled(motion.div)`
   position: relative;
   z-index: 1;
   border-radius: ${Spacing}px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--shadow-color);
+    color: var(--foreground-color);
+  }
 `;
 
 const Contact = () => {

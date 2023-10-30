@@ -31,6 +31,9 @@ import {
   Movie,
   SportsSoccer,
 } from "@mui/icons-material";
+import CV_PATH from "../assets/pdf/matiasmaldonado-CV.pdf";
+
+export const CV = CV_PATH;
 
 export const socialMediaLinks = [
   {
@@ -55,7 +58,7 @@ export const socialMediaLinks = [
     id: 4,
     title: "Download CV",
     icon: <Download />,
-    tooltip: "Download Curriculum Vitae",
+    tooltip: "Download CV",
   },
 ];
 
