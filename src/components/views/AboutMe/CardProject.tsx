@@ -125,7 +125,7 @@ const Flashcards: React.FC<Props> = ({ project }) => {
           </h3>
           <p>{project.description}</p>
         </div>
-        <Logo src={project.src} alt={project.title1} />
+        {project.src && <Logo src={project.src} alt={project.title1} />}
       </Title>
       <List>
         {project.list?.map((item) => (
