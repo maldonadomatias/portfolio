@@ -41,18 +41,21 @@ export const socialMediaLinks = [
     title: "Github",
     icon: <GitHub />,
     tooltip: "Github Profile",
+    url: "https://github.com/maldonadomatias"
   },
   {
     id: 2,
     title: "Email",
     icon: <Email />,
     tooltip: "Email Address",
+    url: "#contact"
   },
   {
     id: 3,
     title: "LinkedIn",
     icon: <LinkedIn />,
     tooltip: "LinkedIn Profile",
+    url: "https://www.linkedin.com/in/matias-maldonado/"
   },
   {
     id: 4,

@@ -195,7 +195,7 @@ const AboutMe = () => {
                             {link.icon}
                           </a>
                         ) : (
-                          <div>{link.icon}</div>
+                          <a href={link.url}>{link.icon}</a>
                         )}
                       </CustomTooltip>
                     </Bounds>
