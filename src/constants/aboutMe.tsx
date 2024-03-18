@@ -1,4 +1,4 @@
-import { CgIfDesign, CgWebsite } from "react-icons/cg";
+import { CgFileDocument, CgIfDesign, CgWebsite } from "react-icons/cg";
 import { LiaConnectdevelop } from "react-icons/lia";
 import { CiMobile3 } from "react-icons/ci";
 
@@ -41,21 +41,21 @@ export const socialMediaLinks = [
     title: "Github",
     icon: <GitHub />,
     tooltip: "Github Profile",
-    url: "https://github.com/maldonadomatias"
+    url: "https://github.com/maldonadomatias",
   },
   {
     id: 2,
     title: "Email",
     icon: <Email />,
     tooltip: "Email Address",
-    url: "#contact"
+    url: "#contact",
   },
   {
     id: 3,
     title: "LinkedIn",
     icon: <LinkedIn />,
     tooltip: "LinkedIn Profile",
-    url: "https://www.linkedin.com/in/matias-maldonado/"
+    url: "https://www.linkedin.com/in/matias-maldonado/",
   },
   {
     id: 4,
@@ -170,10 +170,16 @@ export const projects: Project[] = [
     description: "click to discover my freelance projects here:",
     projects: [
       {
+        icon: <CgFileDocument />,
+        name: "Documentai",
+        description: "upload a pdf and chat with it using ai.,",
+        link: "https://documentai-seven.vercel.app/",
+      },
+      {
         icon: <SportsSoccer />,
         name: "Transferquiz",
         description:
-          "guess the argentinian soccer player from it transfer history,",
+          "guess the argentinian soccer player from it transfer history.",
         link: "https://transferquiz.vercel.app/",
       },
       {
