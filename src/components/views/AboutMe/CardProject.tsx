@@ -5,6 +5,8 @@ import { Project } from "../../../constants/aboutMe";
 import Spacing from "../../../constants/Spacing";
 import CustomTooltip from "../../ui/CustomTooltip";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
+import Button from "../../ui/Button";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
   background-color: var(--background-color);
@@ -121,17 +123,23 @@ const Flashcards: React.FC<Props> = ({ project }) => {
       <Title>
         <div>
           <h3>
-            {project.title1}.{project.title2}
+            {project.title1} {project.title2}
           </h3>
           <p>{project.description}</p>
         </div>
         {project.src && <Logo src={project.src} alt={project.title1} />}
       </Title>
+
       <List>
         {project.list?.map((item) => (
           <li>{item}</li>
         ))}
       </List>
+      {project.link && (
+        <Link target="_blank" to={project.link}>
+          <Button>view more</Button>
+        </Link>
+      )}
       <ScrollableContainer>
         <ArrowLeft />
         <FlashcardsContainer>

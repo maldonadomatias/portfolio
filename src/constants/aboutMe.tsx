@@ -1,4 +1,4 @@
-import { CgFileDocument, CgIfDesign, CgWebsite } from "react-icons/cg";
+import { CgIfDesign, CgWebsite } from "react-icons/cg";
 import { LiaConnectdevelop } from "react-icons/lia";
 import { CiMobile3 } from "react-icons/ci";
 
@@ -15,8 +15,11 @@ import {
   SiDocker,
   SiFigma,
   SiFirebase,
+  SiMongodb,
   SiNextdotjs,
+  SiPrisma,
   SiStyledcomponents,
+  SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 import {
@@ -94,11 +97,34 @@ export interface Project {
   description: string;
   src?: string;
   list?: string[];
+  link?: string;
   tech?: any[];
   projects?: any[];
 }
 
 export const projects: Project[] = [
+  {
+    title1: "document",
+    title2: "ai.",
+    description: "chat with any pdf using ai in seconds.",
+    list: [
+      "Ask questions to your PDF and get the answer right away.",
+      "Developed with the most popular technologies for frontend.",
+      "Use PineconeDB to transform PDF in vectors.",
+    ],
+    link: "https://documentai-seven.vercel.app/",
+    tech: [
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <RiReactjsFill />, name: "React.js" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiPrisma />, name: "Prisma" },
+      { icon: <SiTailwindcss />, name: "Tailwindcss" },
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <Html />, name: "HTML" },
+      { icon: <Css />, name: "CSS" },
+    ],
+  },
   {
     title1: "to the",
     title2: "moon inc.",
@@ -110,6 +136,7 @@ export const projects: Project[] = [
       "Code reviews and contributed to continuous integration and deployment processes.",
       "Implement good practices in the development (responsive, UX)",
     ],
+    link: "https://tothemoonuniverse.com/",
     tech: [
       { icon: <RiReactjsFill />, name: "React.js" },
       { icon: <SiNextdotjs />, name: "Next.js" },
@@ -156,6 +183,7 @@ export const projects: Project[] = [
       "design and development of the website.",
       "real-time metrics monitoring wth Google Play Console and App Store Connect.",
     ],
+    link: "https://publy.app/",
     tech: [
       { icon: <Html />, name: "HTML" },
       { icon: <Css />, name: "CSS" },
@@ -169,12 +197,6 @@ export const projects: Project[] = [
     title2: "projects",
     description: "click to discover my freelance projects here:",
     projects: [
-      {
-        icon: <CgFileDocument />,
-        name: "Documentai",
-        description: "upload a pdf and chat with it using ai.,",
-        link: "https://documentai-seven.vercel.app/",
-      },
       {
         icon: <SportsSoccer />,
         name: "Transferquiz",
