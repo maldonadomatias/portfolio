@@ -154,7 +154,7 @@ const Body = styled.div`
 
 const AboutMe = () => {
   const phrase =
-    "Hey there! I'm Matias, a frontend developer passionate about blending technology with human emotions. I see website creation as an art form, where every line of code and pixel is meticulously crafted to evoke emotions and engage users in a visually stunning digital masterpiece. My focus? Creating more than websites; I design emotional journeys. Let's transform your ideas into unforgettable digital adventures.";
+    "As a Front-End / Full Stack Developer, I bring creativity, organization, and a perfectionist mindset to my work. I excel at solving problems and developing user-friendly interfaces that are visually appealing and easy to navigate. I also have a solid understanding of backend technologies and web development principles, which allows me to work effectively as a full-stack developer creating seamless, integrated applications.";
   const description = useRef(null);
   const isInView = useInView(description);
 

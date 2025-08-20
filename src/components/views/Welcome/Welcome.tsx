@@ -53,7 +53,7 @@ const Welcome = () => {
             className="letter"
             style={{ borderRadius: `${Spacing * 2}px` }}
           >
-            <span className="inside-letter">front-end.web(developer)</span>
+            <span className="inside-letter">front-end.full-stack(developer)</span>
           </SpanLetter>
           <SpanLetter className="mobile-letter">o</SpanLetter>
           <SpanLetter>n</SpanLetter>

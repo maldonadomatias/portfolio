@@ -1,4 +1,4 @@
-import { CgIfDesign, CgWebsite } from "react-icons/cg";
+import { CgWebsite } from "react-icons/cg";
 import { LiaConnectdevelop } from "react-icons/lia";
 import { CiMobile3 } from "react-icons/ci";
 
@@ -15,12 +15,16 @@ import {
   SiDocker,
   SiFigma,
   SiFirebase,
-  SiMongodb,
   SiNextdotjs,
-  SiPrisma,
   SiStyledcomponents,
-  SiTailwindcss,
   SiTypescript,
+  SiVuedotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiSymfony,
+  SiDjango,
+  SiPostgresql,
+  SiAmazonaws,
 } from "react-icons/si";
 import {
   Animation,
@@ -70,23 +74,23 @@ export const socialMediaLinks = [
 
 export const aboutSmallData = [
   {
-    title: "interface.design",
-    description: "briefing, wireframe, ux, ui and design system.",
-    icon: <CgIfDesign />,
-  },
-  {
     title: "frontend.development",
-    description: "react.js, next.js, html, css, js, ts.",
+    description: "html5, css, sass, javascript, typescript, reactjs, next.js, react native, vue.js.",
     icon: <CgWebsite />,
   },
   {
     title: "backend.development",
-    description: "node.js, express.js, firebase.",
+    description: "node.js, php, symfony, django, apis.",
     icon: <LiaConnectdevelop />,
   },
   {
+    title: "databases.cloud",
+    description: "postgresql, mongodb, firebase, aws (s3, services).",
+    icon: <SiAmazonaws />,
+  },
+  {
     title: "mobile.development",
-    description: "react native, expo, android studio.",
+    description: "react native, expo, android studio, ios development.",
     icon: <CiMobile3 />,
   },
 ];
@@ -104,25 +108,41 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title1: "document",
-    title2: "ai.",
-    description: "chat with any pdf using ai in seconds.",
+    title1: "zennovia",
+    title2: "srl",
+    description: "full stack developer - buenos aires, argentina.",
     list: [
-      "Ask questions to your PDF and get the answer right away.",
-      "Developed with the most popular technologies for frontend.",
-      "Use PineconeDB to transform PDF in vectors.",
+      "Developed and maintained React Native mobile applications, improving user experience and app performance.",
+      "Contributed to Vue.js, Symfony, and PHP projects, delivering scalable features and custom solutions.",
+      "Built and optimized Node.js + React.js web applications with emphasis on usability and performance.",
+      "Collaborated with cross-functional teams to define architecture, review code, and deploy solutions using industry best practices.",
     ],
-    link: "https://documentai-seven.vercel.app/",
+    tech: [
+      { icon: <RiReactjsFill />, name: "React.js" },
+      { icon: <CiMobile3 />, name: "React Native" },
+      { icon: <SiVuedotjs />, name: "Vue.js" },
+      { icon: <SiNodedotjs />, name: "Node.js" },
+      { icon: <SiPhp />, name: "PHP" },
+      { icon: <SiSymfony />, name: "Symfony" },
+      { icon: <SiTypescript />, name: "TypeScript" },
+    ],
+  },
+  {
+    title1: "freelance",
+    title2: "projects",
+    description: "decortinas srl & komuk - argentina.",
+    list: [
+      "Designed and implemented management systems using Next.js, PostgreSQL, AWS S3, and AWS services, improving efficiency and automation in business processes.",
+      "Developed dashboards and internal tools tailored to client needs, ensuring scalability and maintainability.",
+      "Worked directly with stakeholders to analyze requirements, propose solutions, and deploy production-ready systems.",
+    ],
     tech: [
       { icon: <SiNextdotjs />, name: "Next.js" },
-      { icon: <RiReactjsFill />, name: "React.js" },
-      { icon: <SiTypescript />, name: "Typescript" },
-      { icon: <SiMongodb />, name: "MongoDB" },
-      { icon: <SiPrisma />, name: "Prisma" },
-      { icon: <SiTailwindcss />, name: "Tailwindcss" },
+      { icon: <SiPostgresql />, name: "PostgreSQL" },
+      { icon: <SiAmazonaws />, name: "AWS S3" },
+      { icon: <SiAmazonaws />, name: "AWS Services" },
+      { icon: <SiTypescript />, name: "TypeScript" },
       { icon: <SiFigma />, name: "Figma" },
-      { icon: <Html />, name: "HTML" },
-      { icon: <Css />, name: "CSS" },
     ],
   },
   {
@@ -140,7 +160,7 @@ export const projects: Project[] = [
     tech: [
       { icon: <RiReactjsFill />, name: "React.js" },
       { icon: <SiNextdotjs />, name: "Next.js" },
-      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiTypescript />, name: "TypeScript" },
       { icon: <SiFirebase />, name: "Firebase" },
       { icon: <SiAdobexd />, name: "Adobe XD" },
       { icon: <SiFigma />, name: "Figma" },
@@ -156,14 +176,15 @@ export const projects: Project[] = [
     description: "data driven solutions.",
     src: IMAGE_PATHS.wais_logo,
     list: [
-      "I collaborated with cross-functional teams to understand business requirements and implement solutions using web technologies such as ReactJS, Typescript, and Firebase.",
-      "Designing and developing user interfaces for data visualization and analysis.",
-      "Responsive and dynamic design for mobile and desktop.",
+      "Built a custom admin dashboard for Apolo Oil Services to track and manage company data.",
+      "Developed with ReactJS, TypeScript, Django.",
+      "Designed UI in Figma.",
+      "Enhanced data collection capabilities for better analysis.",
     ],
     tech: [
       { icon: <RiReactjsFill />, name: "React.js" },
-      { icon: <SiTypescript />, name: "Typescript" },
-      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <SiTypescript />, name: "TypeScript" },
+      { icon: <SiDjango />, name: "Django" },
       { icon: <SiAdobexd />, name: "Adobe XD" },
       { icon: <SiFigma />, name: "Figma" },
       { icon: <Html />, name: "HTML" },
@@ -179,9 +200,9 @@ export const projects: Project[] = [
     description: "publish apps in google play and app store.",
     src: IMAGE_PATHS.publy_logo,
     list: [
-      "end to end development of the app.",
-      "design and development of the website.",
-      "real-time metrics monitoring wth Google Play Console and App Store Connect.",
+      "Worked as end-to-end developer for mobile applications.",
+      "Managed deployments to Apple App Store and Google Play Store.",
+      "Implemented real-time monitoring with Google Play Console and App Store Connect.",
     ],
     link: "https://publy.app/",
     tech: [
@@ -193,9 +214,9 @@ export const projects: Project[] = [
     ],
   },
   {
-    title1: "freelance",
+    title1: "personal",
     title2: "projects",
-    description: "click to discover my freelance projects here:",
+    description: "click to discover my personal projects here:",
     projects: [
       {
         icon: <SportsSoccer />,
